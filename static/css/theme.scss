@@ -1,0 +1,96 @@
+//  主题颜色
+$color-primary: #409EFF;
+$color-info: #909399;
+$color-success: #67C23A;
+$color-warning: #E6A23C;
+$color-danger: #F56C6C;
+//主题light颜色
+$color-primary-light:#03A9F4;
+$color-info-light: #000000;
+$color-success-light: #4CAF50;
+$color-warning-light: #FFA000;
+$color-danger-light: #D32F2F;
+$button-bg: white;
+$button-active-bg: #eee;
+$border-color: #ccc;
+$border-color-hover: #666;
+$border-radius: 4px;
+$box-shadow:0 1px 3px rgba(0, 0, 0, .3);
+// 字体的大小
+$font-size:16px;
+$font-large-size:18px;
+$font-medium-size:14px;
+$font-small:12px;
+$small-widget-height:320px;
+$toast-text-color: #fff;
+$selected-color:lightseagreen;
+// 下滑
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translate(0, -100%)
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0)
+    }
+}
+
+// 淡入
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+// 上滑
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(100%)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+// 这里是设置label的样式，css选择器加号的用法是找到第一个兄弟元素
+input[type="checkbox"]+label::before {
+    content: "\a0";
+    display: inline-block;
+    vertical-align: 0.1em;
+    width: 0.8em;
+    height: 0.8em;
+    margin-right: 1em;
+    border-radius: 0.2em;
+    background-color: #ffffff;
+    text-indent: 0.15em;
+    line-height: 0.65;
+    border: 1px solid #dcdfe6;
+}
+
+input[type="checkbox"]:checked+label::before {
+    content: "\2714";
+    color: #ffffff;
+    background: #409eff;
+}
+
+input[type="checkbox"] {
+    // 这个是隐藏input元素
+    // 方法一使用display none;
+    display: none;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+input[type="checkbox"]:disabled+label::before {
+    background: #e2e5e7;
+}
